@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+
+/* Cada contenedor ocupa la mitad */
+#contenedor1, 
+#contenedor2 {
+  width: 50%;
+  height: 100%;
+}
+
+/* Primer contenedor */
+#contenedor1 {
+  position: relative;
+  border: 3px solid black;
+}
+
+/* Elementos internos del primer contenedor */
+.cuadro {
+  width: 60px;
+  height: 60px;
+  background-color: teal;
+  position: absolute;
+}
+
+/* Posiciones distintas */
+.cuadro:nth-child(1) { top: 20px; left: 20px; }
+.cuadro:nth-child(2) { top: 20px; left: 120px; }
+.cuadro:nth-child(3) { top: 20px; left: 220px; }
+.cuadro:nth-child(4) { top: 120px; left: 20px; }
+.cuadro:nth-child(5) { top: 120px; left: 120px; }
+.cuadro:nth-child(6) { top: 120px; left: 220px; }
+.cuadro:nth-child(7) { top: 220px; left: 20px; }
+.cuadro:nth-child(8) { top: 220px; left: 120px; }
+
+/* Elemento especial */
+#especial {
+  top: 220px;
+  left: 220px;
+  background-color: crimson;
+  border-radius: 50%;
+}
+
+/* Segundo contenedor */
+#contenedor2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#contenedor2 div {
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  margin: 10px;
+}
